@@ -8,7 +8,7 @@ Rails.application.routes.draw do
    resources :friendships, only: [:index,:create, :destroy]
   end
    resources :sleep_records, only: [:index]
-   get "users/:id/friend_record", to: "users#friend_record"
+   get "users/:id/friend_records", to: "users#friend_records"
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
         resources :friendships, only: [:index,:create,:destroy]
       end
       resources :sleep_records, only: [:index]
-      get "users/:id/friend_record", to: "users#friend_record"
+      get "users/:id/friend_records", to: "users#friend_records"
     end
 
   end

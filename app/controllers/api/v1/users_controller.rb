@@ -6,7 +6,6 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   def friend_records
     @friends = @user.friends
-    @record
   end
 
   private

@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+#rails adminuser = User.last
+gem 'rails_admin', '~> 2.0'
 
 #faker for seed
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'

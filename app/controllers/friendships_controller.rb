@@ -1,5 +1,9 @@
 class FriendshipsController < ApplicationController
   protect_from_forgery with: :exception
+  def index
+    @friendship = Friendship.all
+  end
+
   def create
     #is this bulk addition or individual addition?
     if params.include?(:friend_id) #individual e.g. "Add friend" link

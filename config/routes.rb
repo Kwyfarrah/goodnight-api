@@ -5,19 +5,21 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
    resources :sleep_records, only: [:create]
-   resources :friendships, only: [:index]
+   resources :friendships, only: [:index,:create, :destroy]
   end
    resources :sleep_records, only: [:index]
-   resources :friendships, only: [:create, :destory]
+   get "users/:id/friend_record", to: "users#friend_record"
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :users, only: [:show] do
         resources :sleep_records, only: [:create]
-        resources :friendships, only: [:index]
+        resources :friendships, only: [:index,:create,:destroy]
       end
       resources :sleep_records, only: [:index]
-      resources :friendships, only: [:create, :destory]
+      get "users/:id/friend_record", to: "users#friend_record"
     end
+
   end
+
 end

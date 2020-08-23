@@ -4,6 +4,10 @@ class Api::V1::UsersController < Api::V1::BaseController
   def show
   end
 
+  def friend_record
+
+  end
+
   private
 
   def set_user

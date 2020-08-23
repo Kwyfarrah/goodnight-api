@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+gem 'simple_token_authentication'
 #rails adminuser = User.last
 gem 'rails_admin', '~> 2.0'
 

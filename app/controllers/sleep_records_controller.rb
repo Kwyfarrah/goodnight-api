@@ -1,6 +1,6 @@
 class SleepRecordsController < ApplicationController
   def index
-    @sleep_records = SleepRecord.all
+    @sleep_records = SleepRecord.all.order(created_at: :asc)
   end
 
   def create
